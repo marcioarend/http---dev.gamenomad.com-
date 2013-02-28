@@ -5,8 +5,23 @@
 <body>
 <h1>Welcome to GameNomad</h1>
 <?php echo $this->layout()->content; ?>
-<p>
-Questions? Contact the GameNomad team at support@gamenomad.com!
-</p>
-</body>
-</html>
+<p>Questions? Contact the GameNomad team at support@gamenomad.com! <?php echo $this->partial('_hottestgame.phtml',array(
+        	'permalink' => 'link', 
+        	'title' => 'titel')); ?>
+
+
+<ul id="hottest">
+	<li><?= $this->partialLoop('_hottestgames.phtml',
+	array(
+	array('asin' => 'B000TG530M', 'title' => 'Call of Duty 4: Modern Warfare'),
+	array('asin' => 'B000FRU1UM', 'title' => 'Grand Theft Auto IV'),
+	array('asin' => 'B000FRU0NU', 'title' => 'Halo 3')
+	)
+	)?>
+	</li>
+	</ul>
+	 
+
+	</p>
+	</body>
+	</html>

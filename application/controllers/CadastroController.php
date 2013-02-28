@@ -1,6 +1,6 @@
 <?php
 
-class AboutController extends Zend_Controller_Action
+class CadastroController extends Zend_Controller_Action
 {
 
     public function init()
@@ -10,10 +10,9 @@ class AboutController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $this->view->titulo = "Game Nomad";
+        // action body
     }
 
 
 }
-
 
